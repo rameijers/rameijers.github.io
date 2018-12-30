@@ -1,0 +1,171 @@
+
+body {
+	font-family: 'Alegreya', sans-serif;
+	width: 100wh;
+	height: 90vh;
+	color: #fff; 
+	background-color: #41D42D;
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+	overflow: hidden;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+main{
+	width: 400px;
+	max-width: calc(100% - 20px);
+	margin-left: 20%;
+	margin-top: 100px;
+	height: auto;
+	transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin-left: 10px;
+  }
+}
+
+a{	
+	color: white;
+}
+
+footer {
+	position: absolute;
+	color: white;
+	bottom: 5px;
+}
+
+
+.title{
+	position: relative;
+	font-size: 22px;
+	color: #FFFFFF;
+	cursor: pointer;
+	max-height: 30px;
+	transition: max-height 1s ease;
+}
+
+
+.title:before,
+.title:after {
+  content: '';
+  border-color: white;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.title:before {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  top: 0px;
+  left: -5px;
+}
+
+.title:after {
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  bottom:0px;
+  left: calc(100% - 10px);
+}
+
+.dropdowncontainer{
+	overflow:hidden;
+}
+
+.dropdown{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:  space-between;
+	transition: all 0.5s ease;
+	transform: translate(0, -200%);
+	color: white;
+	width: calc(100% - 20px);
+	height: 0%;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+.dropdown i {
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+
+#about_content.dropdown i:hover{
+	border-bottom: 1px solid black;
+}
+
+.largeicon{
+	font: 100px;
+}
+
+#project_title{
+	top: 30px;
+}
+
+
+#project_content .projecticon{
+	position: relative;
+	width: 47px;
+	height: 47px;
+	padding: 10px;
+}
+
+#project_content img{
+	position: relative;
+	width: 45px;
+	height: 45px;
+	border-radius: 10px;
+}
+
+#project_content.dropdown img:hover{
+	box-shadow: 0 0 5px #FFFFFF;
+}
+
+.activated-project{
+	box-shadow: 0 0 5px #FFFFFF;
+}
+
+#tooltip{
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	border-radius: 3px;
+	background-color: #00000099;
+	transition: all 0.2s ease;
+	padding: 5px;
+	font-family: Roboto, sans-serif;
+}
+
+#tooltip a{
+	color: #C55500;
+}
+
+.title-active{
+	height: auto;
+	max-height: 300px;
+}
+
+.opened{
+	height: 100%;
+	transform: translate(0, 0px);
+}
+
